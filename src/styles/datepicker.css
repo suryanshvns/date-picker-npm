@@ -1,0 +1,92 @@
+/**
+ * Optional global styles for this date picker package.
+ * Imports with Tailwind in apps / Storybook (`stories/storybook.css`).
+ */
+.datepicker-root,
+.datepicker-root * {
+  font-family: var(--dp-font);
+}
+
+.datepicker-root {
+  --dp-font: ui-sans-serif, system-ui, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  --dp-radius-sm: 8px;
+  --dp-radius-md: 12px;
+  --dp-radius-lg: 20px;
+  --dp-shadow: 0 0 0 1px rgb(15 23 42 / 0.05), 0 2px 4px rgb(15 23 42 / 0.03),
+    0 28px 56px -16px rgb(15 23 42 / 0.18);
+  --dp-shadow-inner: inset 0 1px 0 0 rgb(255 255 255 / 0.92),
+    inset 0 0 0 1px rgb(255 255 255 / 0.4);
+  --dp-border: rgb(226 232 240 / 0.85);
+  --dp-surface: #ffffff;
+  --dp-surface-muted: rgb(248 250 252);
+  --dp-surface-glow: rgb(255 255 255);
+  --dp-fg: rgb(15 23 42);
+  --dp-fg-muted: rgb(100 116 139);
+  --dp-fg-subtle: rgb(148 163 184);
+  --dp-primary: rgb(0 149 255);
+  --dp-primary-hover: rgb(0 132 230);
+  --dp-on-primary: #ffffff;
+  --dp-accent: rgb(99 102 241);
+  --dp-accent-soft: rgb(99 102 241 / 0.12);
+  --dp-range-mid: rgb(224 242 254 / 0.95);
+  --dp-range-mid-hover: rgb(191 219 254 / 0.95);
+  --dp-cell-hover: rgb(241 245 249);
+  --dp-today-ring: rgb(0 149 255 / 0.55);
+  --dp-cell-selected-glow: rgb(0 149 255 / 0.35);
+  --dp-preset-bg: rgb(255 255 255 / 0.75);
+  --dp-preset-border: rgb(0 149 255 / 0.35);
+  --dp-danger: rgb(220 38 38);
+  --dp-danger-border: rgb(239 68 68);
+  --dp-danger-surface: #ffffff;
+  --dp-input-border: rgb(226 232 240 / 0.95);
+  --dp-input-inset: inset 0 1px 2px rgb(15 23 42 / 0.05);
+  --dp-focus-ring: rgb(0 149 255 / 0.28);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--dp-fg);
+  border-radius: var(--dp-radius-lg);
+  border: 1px solid var(--dp-border);
+  background: linear-gradient(
+    168deg,
+    var(--dp-surface-glow) 0%,
+    var(--dp-surface) 42%,
+    var(--dp-surface-muted) 112%
+  );
+  box-shadow: var(--dp-shadow), var(--dp-shadow-inner);
+}
+
+.dark .datepicker-root {
+  --dp-border: rgb(51 65 85 / 0.9);
+  --dp-surface: rgb(15 23 42);
+  --dp-surface-muted: rgb(30 41 59);
+  --dp-surface-glow: rgb(30 41 59);
+  --dp-fg: rgb(241 245 249);
+  --dp-fg-muted: rgb(148 163 184);
+  --dp-fg-subtle: rgb(100 116 139);
+  --dp-range-mid: rgb(30 58 138 / 0.42);
+  --dp-range-mid-hover: rgb(49 46 129 / 0.48);
+  --dp-cell-hover: rgb(51 65 85);
+  --dp-preset-bg: rgb(30 41 59 / 0.6);
+  --dp-preset-border: rgb(96 165 250 / 0.35);
+  --dp-input-border: rgb(71 85 105 / 0.95);
+  --dp-input-inset: inset 0 1px 2px rgb(0 0 0 / 0.22);
+  --dp-danger-surface: rgb(15 23 42);
+  --dp-shadow: 0 0 0 1px rgb(0 0 0 / 0.35), 0 24px 48px -16px rgb(0 0 0 / 0.55);
+  --dp-shadow-inner: inset 0 1px 0 0 rgb(255 255 255 / 0.06);
+}
+
+/** Native selects: subtle chevron — works with Tailwind `dp-select` class */
+.dp-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.55rem center;
+  background-size: 14px;
+}
+
+.dark .dp-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}

@@ -1,0 +1,118 @@
+{
+  "name": "lattice-react-datepicker",
+  "version": "0.1.9",
+  "description": "Lattice Date Picker — React & Next.js date and range picker with presets, optional time, Tailwind-ready UI, CSS-variable theming, keyboard + screen-reader friendly. TypeScript, ESM+CJS, tree-shakeable.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./time": {
+      "types": "./dist/time/index.d.ts",
+      "import": "./dist/time/index.js",
+      "require": "./dist/time/index.cjs"
+    },
+    "./theme.css": "./src/styles/datepicker.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src/styles"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006 --host localhost",
+    "storybook:6007": "storybook dev -p 6007 --host localhost",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@storybook/addon-a11y": "^8.4.7",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.16.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.13.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "storybook": "^8.4.7",
+    "tailwindcss": "^3.4.16",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "nextjs",
+    "next.js",
+    "next",
+    "app-router",
+    "datepicker",
+    "date-picker",
+    "date-picker-react",
+    "calendar",
+    "range-picker",
+    "date-range",
+    "date-range-picker",
+    "datetime",
+    "time-picker",
+    "tailwind",
+    "tailwindcss",
+    "typescript",
+    "accessible",
+    "a11y",
+    "keyboard-navigation",
+    "timezone",
+    "i18n",
+    "headless",
+    "components",
+    "ui",
+    "presets",
+    "esm",
+    "cjs",
+    "tree-shaking",
+    "ssr-safe",
+    "client-component",
+    "rsc"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
